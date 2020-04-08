@@ -74,6 +74,23 @@
         Apply Now
       </button>
     </section>
-    <script></script>
+    <script>
+      
+let button = document.querySelector(".apply-btn");
+
+button.addEventListener("click", function(event) {
+  event.preventDefault();
+  let name = prompt("What's your name?");
+  let country = prompt("What country are you from?");
+  let h1 = document.querySelector("h1");
+  country = country.toLocaleLowerCase();
+
+  if (country === "portugal" || country === "brazil") {
+    h1.innerHTML = "Ola, " + name;
+  } else {
+    h1.innerHTML = "Hello, " + name;
+  }
+});
+    </script>
   </body>
 </html>
